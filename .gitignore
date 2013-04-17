@@ -1,3 +1,6 @@
 *~
 chef/tmp
-.vagrant
+.vagrant*
+dea_ng
+*#
+.#*
