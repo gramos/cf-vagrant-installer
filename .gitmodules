@@ -1,0 +1,3 @@
+[submodule "dea_ng"]
+	path = dea_ng
+	url = https://github.com/cloudfoundry/dea_ng.git
