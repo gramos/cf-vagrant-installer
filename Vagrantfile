@@ -7,8 +7,7 @@ Vagrant::Config.run do |config|
 
   config.vm.share_folder "dea_repo", "/dea", "./dea_ng"
   config.vm.share_folder "uaa_repo", "/uaa", "./uaa"
-  config.vm.share_folder "login_server", "/login-server", "./../deploy/login-server"
-  config.vm.share_folder "maven2", "/maven2", "~/.m2"
+  config.vm.share_folder "cc_ng_repo", "/cc_ng", "./cloud_controller_ng"
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path    = ["./chef/cookbooks", "./chef"]
