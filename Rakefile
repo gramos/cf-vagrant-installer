@@ -1,7 +1,7 @@
 require 'rake'
 
 desc "Init git submodules and clone required repos"
-task :bootstrap => [:init_git_submodules, :clone_required_repos] do
+task :bootstrap => [:clone_required_repos, :init_git_submodules] do
 
 end
 
