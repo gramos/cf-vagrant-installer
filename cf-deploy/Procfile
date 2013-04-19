@@ -1,0 +1,3 @@
+nats: nats-server
+uaa: mvn tomcat:run -f uaa/pom.xml
+cc_ng: cc_ng/bin/cloud_controller -d -m
