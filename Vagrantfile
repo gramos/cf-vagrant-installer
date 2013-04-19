@@ -5,9 +5,9 @@ Vagrant::Config.run do |config|
   config.vm.forward_port 4222, 4222 # NATS
   config.vm.forward_port 5678, 5678 # DirectoryServerV2
 
-  config.vm.share_folder "dea_repo", "/dea", "./dea_ng"
-  config.vm.share_folder "uaa_repo", "/uaa", "./uaa"
-  config.vm.share_folder "cc_ng_repo", "/cc_ng", "./cloud_controller_ng"
+  config.vm.share_folder "dea_repo", "/cf-deploy/dea", "./dea_ng"
+  config.vm.share_folder "uaa_repo", "/cf-deploy/uaa", "./uaa"
+  config.vm.share_folder "cc_ng_repo", "/cf-deploy/cc_ng", "./cloud_controller_ng"
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path    = ["./chef/cookbooks", "./chef"]
@@ -18,7 +18,6 @@ Vagrant::Config.run do |config|
     chef.add_recipe "git"
     chef.add_recipe "dea::packages"
     chef.add_recipe "dea::dea"
-    #chef.add_recipe "dea::submodule_init"
     chef.add_recipe "warden::install"
     chef.add_recipe "warden::install_rootfs"
     chef.add_recipe "uaa::repositories"

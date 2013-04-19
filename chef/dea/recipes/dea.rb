@@ -1,5 +1,5 @@
 execute "install dea gems" do
-  cwd "/dea"
+  cwd "/cf-deploy/dea"
   command "bundle install"
   action :run
 end

@@ -1,5 +1,5 @@
 execute "install java uaa packages" do
-  cwd "/uaa"
+  cwd "/cf-deploy/uaa"
   command "mvn clean install"
   action :run
 end
