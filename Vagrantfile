@@ -24,5 +24,7 @@ Vagrant::Config.run do |config|
     chef.add_recipe "uaa::repositories"
     chef.add_recipe "uaa::packages"
     chef.add_recipe "uaa::install"
+    chef.add_recipe "cc_ng::packages"
+    chef.add_recipe "cc_ng::install"
   end
 end
