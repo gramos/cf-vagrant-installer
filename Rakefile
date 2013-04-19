@@ -9,8 +9,8 @@ desc "Init git submodules"
 task :init_git_submodules do
   print "==> Submodules that need to be initialized: "
 
-  count = exec "git submodule status --recursive | grep ^- | wc -l"
-  `git submodule update --init --recursive` if count.to_i > 0
+  count = exec("git submodule status --recursive | grep ^- | wc -l").to_i
+  `git submodule update --init --recursive` if count > 0
 end
 
 desc "Clone required repos"
