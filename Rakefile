@@ -10,7 +10,7 @@ task :init_git_submodules do
   print "==> Submodules that need to be initialized: "
 
   count = exec("git submodule status --recursive | grep ^- | wc -l").to_i
-  `git submodule update --init --recursive` if count > 0
+  exec "git submodule update --init --recursive" if count > 0
 end
 
 desc "Clone required repos"
@@ -21,6 +21,6 @@ task :clone_required_repos do
     puts "Nothing to clone"
   else
     puts "uaa need to be cloned"
-    `https://github.com/cloudfoundry/uaa.git`
+    exec "git clone https://github.com/cloudfoundry/uaa.git"
   end
 end
