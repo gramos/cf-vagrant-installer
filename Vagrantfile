@@ -12,16 +12,16 @@ Vagrant::Config.run do |config|
     chef.provisioning_path = "/var/vagrant-chef"
     chef.log_level         = :debug
 
-    # chef.add_recipe "apt"
-    # chef.add_recipe "git"
-    # chef.add_recipe "dea::packages"
-    # chef.add_recipe "dea::dea"
-    # chef.add_recipe "warden::install"
-    # chef.add_recipe "warden::install_rootfs"
-    # chef.add_recipe "uaa::repositories"
-    # chef.add_recipe "uaa::packages"
-    # chef.add_recipe "uaa::install"
-    # chef.add_recipe "cc_ng::packages"
-    # chef.add_recipe "cc_ng::install"
+    chef.add_recipe "apt"
+    chef.add_recipe "git"
+    chef.add_recipe "dea::packages"
+    chef.add_recipe "dea::dea"
+    chef.add_recipe "warden::install"
+    chef.add_recipe "warden::install_rootfs"
+    chef.add_recipe "uaa::repositories"
+    chef.add_recipe "uaa::packages"
+    chef.add_recipe "uaa::install"
+    chef.add_recipe "cc_ng::packages"
+    chef.add_recipe "cc_ng::install"
   end
 end

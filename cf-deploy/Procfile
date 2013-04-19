@@ -1,3 +1,4 @@
-nats: nats-server
+#nats: nats-server
+#dea: cd dea_ng && foreman start 
 uaa: mvn tomcat:run -f uaa/pom.xml
-cc_ng: cc_ng/bin/cloud_controller -d -m
+cc_ng: sudo cloud_controller_ng/bin/cloud_controller -d -m
