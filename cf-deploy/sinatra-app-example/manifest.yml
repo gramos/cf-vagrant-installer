@@ -1,0 +1,7 @@
+---
+applications:
+- name: sinatra-app
+  memory: 256M
+  instances: 1
+  url: sinatra-app.vcap.me
+  path: .
