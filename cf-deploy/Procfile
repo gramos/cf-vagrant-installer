@@ -1,3 +1,4 @@
 dea: ./run-dea.sh
 uaa: ./run-uaa.sh
 cc_ng: ./run-cc.sh 
+warden: ./run-warden.sh
