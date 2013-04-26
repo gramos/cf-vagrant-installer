@@ -1,5 +1,5 @@
 WARDEN_PATH = "/warden"
-ROOT_FS = "/var/warden/rootfs"
+ROOT_FS = "/tmp/warden/rootfs"
 OLD_CONFIG_FILE_PATH = "#{WARDEN_PATH}/warden/config/linux.yml"
 NEW_CONFIG_FILE_PATH = "#{WARDEN_PATH}/warden/config/dea_vm.yml"
 

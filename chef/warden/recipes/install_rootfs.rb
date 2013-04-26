@@ -1,4 +1,4 @@
-ROOT_FS = "/var/warden/rootfs".freeze
+ROOT_FS = "/tmp/warden/rootfs".freeze
 WARDEN_STEMCELL_FILE="last_successful_bosh-stemcell.tgz".freeze
 WARDEN_STEMCELL_URL = "https://s3.amazonaws.com/bosh-jenkins-artifacts/#{WARDEN_STEMCELL_FILE}".freeze
 STEMCELL_MOUNT = "/mnt/stemcell".freeze
@@ -66,4 +66,3 @@ execute_in_chroot "install ruby" do
           ].join(' && ')
   creates "#{ROOT_FS}/#{PREFIX}/ruby/bin/ruby"
 end
-

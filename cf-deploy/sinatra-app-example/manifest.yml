@@ -1,7 +1,0 @@
----
-applications:
-- name: my-app
-  memory: 256M
-  instances: 1
-  url: my-app.vcap.me
-  path: .
